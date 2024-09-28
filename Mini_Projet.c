@@ -11,7 +11,7 @@ int main() {
     float prix[MAX];
     char titreRechercher[100];
     
-    printf("\n                ----- Système de Gestion de Stock de Librairie -----\n");
+    printf("\n                ----- Systeme de Gestion de Stock de Librairie -----\n");
     do {
         printf("\n   **** MENU ****\n");
         printf("1. Ajouter des livres \n");
@@ -140,7 +140,7 @@ int main() {
                 break;
 
             case 7:
-                printf("Au revoir\n");
+                printf("Au revoir !\n");
                 break;
 
             default:
