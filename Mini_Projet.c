@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <string.h>
+#define MAX 100
 
 int main() {
     int nLivre = 0;
     int choix, trouver;
     int nAjouter;
-    int quantite[1000];
-    char titre[1000][100], auteur[1000][100];
-    float prix[1000];
+    int quantite[MAX];
+    char titre[MAX][100], auteur[MAX][100];
+    float prix[MAX];
     char titreRechercher[100];
     
     printf("\n                ----- Système de Gestion de Stock de Librairie -----\n");
@@ -29,10 +30,10 @@ int main() {
                     printf("Combien de livres souhaitez-vous ajouter ? ");
                     scanf("%d", &nAjouter);
 
-                    if (nAjouter > (1000 - nLivre)) {
-                        printf("Impossible de ajouter plus de %d livres\n", 1000 - nLivre);
+                    if (nAjouter > (MAX - nLivre)) {
+                        printf("Impossible de ajouter plus de %d livres\n", MAX - nLivre);
                     }
-                } while (nAjouter > (1000 - nLivre));
+                } while (nAjouter > (MAX - nLivre));
 
                 for (int i = 0; i < nAjouter; i++) {
                     printf("\nAjouter du livre %d\n", i + 1);
@@ -47,10 +48,10 @@ int main() {
                     nLivre++; 
                 }
                 if(nAjouter >= 2)
-                {printf("%d livres ajoutes avec succes \n", nAjouter);
+                {printf("\n %d livres ajoutes avec succes \n", nAjouter);
                 }
                 else 
-                    printf("Livre ajoute avec succes");
+                    printf("\n Livre ajoute avec succes");
                break;
             
 
